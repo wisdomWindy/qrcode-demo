@@ -1,0 +1,8 @@
+.intro {
+  margin: 30px;
+  text-align: center;
+}
+.canvas{
+	width: 200rpx;
+	height: 200rpx;
+}
