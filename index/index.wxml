@@ -5,3 +5,10 @@ data-canvasid="myCanvas"
 id="canvas" 
 bindlongpress="handleLongpress" 
 class="canvas"></canvas>
+<image src="{{imgUrl}}" mode="aspectFill" data-url="{{imgUrl}}" bindlongpress="handleimgLongpress" class="img"></image>
+<!-- <image src="../imgs/wei.jpg" mode="aspectFill" show-menu-by-longpress="{{true}}" bindlongpress="handleimgLongpress" class="img"></image> -->
+<!-- <image src="../imgs/weixinq.jpg" mode="aspectFill" show-menu-by-longpress="{{true}}" bindlongpress="handleimgLongpress" class="img"></image> -->
+<!-- <image src="../imgs/xcx.jpg" mode="aspectFill" show-menu-by-longpress="{{true}}" bindlongpress="handleimgLongpress" class="img"></image> -->
+<!-- <image src="../imgs/weixingeren.jpg" mode="aspectFill" show-menu-by-longpress="{{true}}" bindlongpress="handleimgLongpress" class="img"></image> -->
+<!-- <image src="../imgs/wechatq.jpg" mode="aspectFill" show-menu-by-longpress="{{true}}" bindlongpress="handleimgLongpress" class="img"></image> -->
+<!-- <image src="../imgs/common.jpg" mode="aspectFill" show-menu-by-longpress="{{true}}" bindlongpress="handleimgLongpress" class="img"></image> -->
