@@ -8,6 +8,7 @@ Page({
 
 	},
 	onLoad() {
+		
 		wx.createSelectorQuery().select('#canvas').fields({
 			node: true
 		}).exec(res => {
@@ -16,6 +17,7 @@ Page({
 			const img = canvas.createImage();
 			img.src = '../imgs/hello+world.png';
 			img.onload = () => {
+				// 绘制图片，目的是得到图片的url，给后面的解析提供数据
 				ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
 				let url = canvas.toDataURL();
 				this.setData({
@@ -24,10 +26,13 @@ Page({
 			}
 		});
 	},
+
+	// longprogress事件
 	handleimgLongpress(e) {
 		let {
 			url: url
 		} = e.currentTarget.dataset;
+		// 触发事件后显示自定义菜单，点击识别二维码后通过upng库进行解析然后把二维码的内容打印出来
 		wx.showActionSheet({
 			itemList: ['识别二维码'],
 			success: (result) => {

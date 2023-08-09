@@ -40,7 +40,8 @@
 		"disableUseStrict": false,
 		"minifyWXML": true,
 		"showES6CompileOption": false,
-		"useCompilerPlugins": false
+		"useCompilerPlugins": false,
+		"condition": false
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.27.0",
