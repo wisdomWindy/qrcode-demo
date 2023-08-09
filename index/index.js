@@ -32,7 +32,7 @@ Page({
 		let {
 			url: url
 		} = e.currentTarget.dataset;
-		// 触发事件后显示自定义菜单，点击识别二维码后通过upng库进行解析然后把二维码的内容打印出来
+		// 触发事件后显示自定义菜单，点击识别二维码后通过upng库把图片转换成jsqr能够识别的数据
 		wx.showActionSheet({
 			itemList: ['识别二维码'],
 			success: (result) => {
@@ -40,6 +40,7 @@ Page({
 					let buff = wx.base64ToArrayBuffer(url.split(',')[1]);
 					let r = upng.decode(buff);
 					let rgba = upng.toRGBA8(r)[0];
+					// 使用jsqr库解析二维码内容
 					let code = jsQR(new Uint8ClampedArray(rgba), r.width,r.height);
 					console.log(code.data)
 				}
